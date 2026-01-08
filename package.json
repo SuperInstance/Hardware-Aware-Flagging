@@ -1,0 +1,71 @@
+{
+  "name": "@superinstance/hardware-aware-flagging",
+  "version": "1.0.0",
+  "description": "Hardware-aware feature flagging system with graceful degradation and progressive enhancement",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./react": {
+      "import": "./dist/react.js",
+      "types": "./dist/react.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "type-check": "tsc --noEmit",
+    "prepublishOnly": "npm run build",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest --coverage"
+  },
+  "keywords": [
+    "feature-flags",
+    "feature-toggle",
+    "hardware-detection",
+    "progressive-enhancement",
+    "graceful-degradation",
+    "a-b-testing",
+    "feature-management",
+    "react-hooks",
+    "typescript"
+  ],
+  "author": "SuperInstance",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SuperInstance/Hardware-Aware-Flagging.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SuperInstance/Hardware-Aware-Flagging/issues"
+  },
+  "homepage": "https://github.com/SuperInstance/Hardware-Aware-Flagging#readme",
+  "peerDependencies": {
+    "react": "^18.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0",
+    "jsdom": "^25.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
